@@ -1,0 +1,202 @@
+import os,time
+f1="  *"
+f2="***"
+f3="* *"
+f4="*  "
+f5="  "
+
+
+def _getnum_(N,opt):
+    PN=str(N)
+    fx=PN[0]
+    fy=PN[1]
+    if opt==1:
+        Px=fx
+    if opt==2:
+        Px=fy
+    
+    
+    return Px
+
+def  _num_(fx,fy):
+    fx1=int(fx)
+    fy1=int(fy)
+    c=1
+    cad=""
+    cad2=""
+    while c<6:
+        cad=""
+        cad2=""
+        if fx1==0:
+            cad=_num0_(c)
+        if fx1==1:
+            cad=_num1_(c)
+        if fx1==2:
+            cad=_num2_(c)
+        if fx1==3:
+            cad=_num3_(c)
+        if fx1==4:
+            cad=_num4_(c)
+        if fx1==5:
+            cad=_num5_(c)
+        if fx1==6:
+            cad=_num6_(c)
+        if fx1==7:
+            cad=_num7_(c)
+        if fx1==8:
+            cad=_num8_(c)
+        if fx1==9:
+            cad=_num9_(c)
+        cad=cad+f5
+        if fy1==0:
+            cad2=_num0_(c)
+        if fy1==1:
+            cad2=_num1_(c)
+        if fy1==2:
+            cad2=_num2_(c)
+        if fy1==3:
+            cad2=_num3_(c)
+        if fy1==4:
+            cad2=_num4_(c)
+        if fy1==5:
+            cad2=_num5_(c)
+        if fy1==6:
+            cad2=_num6_(c)
+        if fy1==7:
+            cad2=_num7_(c)
+        if fy1==8:
+            cad2=_num8_(c)
+        if fy1==9:
+            cad2=_num9_(c)
+        print cad+cad2
+        c=c+1
+        
+def _num0_(K):
+    if K==1:
+        pr=f2
+    if K==2:
+        pr=f3 
+    if K==3:
+        pr=f3
+    if K==4:
+        pr=f3
+    if K==5:
+        pr=f2   
+    return pr 
+def _num1_(K):
+    if K==1:
+        pr=f1
+    if K==2:
+        pr=f1 
+    if K==3:
+        pr=f1
+    if K==4:
+        pr=f1
+    if K==5:
+        pr=f1
+    return pr
+def _num2_(K):
+    if K==1:
+        pr=f2
+    if K==2:
+        pr=f1 
+    if K==3:
+        pr=f2
+    if K==4:
+        pr=f4
+    if K==5:
+        pr=f2
+    return pr
+def _num3_(K):
+    if K==1:
+        pr=f2
+    if K==2:
+        pr=f1 
+    if K==3:
+        pr=f2
+    if K==4:
+        pr=f1
+    if K==5:
+        pr=f2
+    return pr
+def _num4_(K):
+    if K==1:
+        pr=f3
+    if K==2:
+        pr=f3 
+    if K==3:
+        pr=f2
+    if K==4:
+        pr=f1
+    if K==5:
+        pr=f1
+    return pr
+def _num5_(K):
+    if K==1:
+        pr=f2
+    if K==2:
+        pr=f4 
+    if K==3:
+        pr=f2
+    if K==4:
+        pr=f1
+    if K==5:
+        pr=f2
+    return pr
+def _num6_(K):
+    if K==1:
+        pr=f2
+    if K==2:
+        pr=f4 
+    if K==3:
+        pr=f2
+    if K==4:
+        pr=f3
+    if K==5:
+        pr=f2
+    return pr
+def _num7_(K):
+    if K==1:
+        pr=f2
+    if K==2:
+        pr=f1 
+    if K==3:
+        pr=f1
+    if K==4:
+        pr=f1
+    if K==5:
+        pr=f1
+    return pr
+def _num8_(K):
+    if K==1:
+        pr=f2
+    if K==2:
+        pr=f3 
+    if K==3:
+        pr=f2
+    if K==4:
+        pr=f3
+    if K==5:
+        pr=f2
+    return pr
+def _num9_(K):
+    if K==1:
+        pr=f2
+    if K==2:
+        pr=f3 
+    if K==3:
+        pr=f2
+    if K==4:
+        pr=f1
+    if K==5:
+        pr=f1
+    return pr
+N=10
+while N<100:
+    fx=_getnum_(N,1)
+    fy=_getnum_(N,2)    
+    _num_(fx,fy)    
+    N=N+1
+    time.sleep(1)
+    os.system("cls")
+    
